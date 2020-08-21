@@ -1,0 +1,93 @@
+main {
+  @import "nav";
+  .curve {
+    height: 10vh;
+    width: 100%;
+    margin-top: 5.1875rem;
+    background-image: url(/images/bg-curve-mobile.svg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    @include breakup(large) {
+      background-image: url(/images/bg-curve-desktop.svg);
+    }
+  }
+  section {
+    .hero {
+      // padding: 0 2.3125rem;
+      margin: 4.8125rem auto;
+      margin-bottom: 3rem;
+      .hero-img {
+        max-height: 15.25rem;
+        width: auto;
+        object-fit: cover;
+        padding: 0 auto;
+        @include breakup(large) {
+          min-height: 28.07rem;
+          width: auto;
+        }
+      }
+    }
+    &:nth-of-type(1) {
+      background-color: #fff;
+    }
+    &:nth-of-type(2) {
+      background-color: #f9f8fe;
+    }
+    @import "one";
+    @import "two";
+  }
+  .get-started {
+    width: 100%;
+    padding-top: 6.625rem;
+    padding-bottom: 6.625rem;
+    background-color: $getColor;
+    &__container {
+      padding: 0 3.875rem;
+      color: $lightGrayishBlue;
+      flex-wrap: wrap;
+      > div {
+        width: 100%;
+        @include breakup(large) {
+          width: 50%;
+          text-align: left;
+        }
+        @include breakdown(medium) {
+          text-align: center;
+          font-size: 80%;
+          p {
+            min-width: 100%;
+          }
+          button {
+            min-width: 100%;
+            padding: 0.875rem 3.5rem;
+            white-space: nowrap;
+          }
+          input[type="email"] {
+            min-width: 100%;
+          }
+        }
+        p {
+          padding: 1rem 0;
+          width: 80%;
+        }
+        input[type="email"] {
+          width: 70%;
+          &::placeholder {
+            opacity: 0.5;
+          }
+        }
+        button {
+          width: fit-content;
+          padding: 0.875rem 1.9375rem;
+          margin: 0 0;
+        }
+      }
+    }
+  }
+  @import "footer";
+}
+img.top-img {
+  height: 10vh;
+  width: 100%;
+  position: absolute;
+}

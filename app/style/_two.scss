@@ -1,0 +1,74 @@
+//mobile first
+.container.two {
+  min-height: 100vh;
+  flex-direction: column;
+  background-color: #f9f8fe;
+  padding: 0 3.875rem;
+  padding-top: 10vh;
+
+  img {
+    order: 1;
+  }
+  .description {
+    padding: 1rem 0;
+    order: 2;
+    width: 100%;
+    h1 {
+      font-size: 1.25rem;
+      text-align: center;
+    }
+    p {
+      margin: 1rem 0;
+      &:nth-of-type(2) {
+        margin: 1rem 0;
+      }
+    }
+    @import "card";
+    a {
+      display: flex;
+      width: fit-content;
+      margin: 0 auto;
+      img {
+        display: inline-block;
+        height: 1.375rem;
+        width: fit-content;
+        object-fit: cover;
+        margin-left: 0.3125rem;
+      }
+    }
+  }
+  @include breakup(large) {
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    .hero {
+      order: 2;
+    }
+    .description {
+      width: 50%;
+      order: 1;
+      h1 {
+        text-align: left;
+        font-size: 1.75rem;
+        margin-bottom: 2.5rem;
+      }
+      a {
+        position: relative;
+        width: fit-content;
+        color: $moderateCyan;
+        margin: 0.625rem 0;
+        font-weight: 500;
+        display: flex;
+        &::after {
+          content: "";
+          position: absolute;
+          margin-top: 1.875rem;
+          left: 0rem;
+          height: 0.0625rem;
+          width: 100%;
+          background: $moderateCyan;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,27 @@
+nav {
+  background: #fff;
+  padding: 1.5625rem 1.5rem;
+  @include breakup(large) {
+    padding: 0 3.875rem;
+    padding-top: 3.8125rem;
+    padding-bottom: 3.8125rem;
+  }
+  img.logo-img {
+    width: 5.125rem;
+    height: 1.5625rem;
+    @include breakup(large) {
+      height: 3.0625rem;
+      width: 10.375rem;
+      object-fit: cover;
+    }
+  }
+  li {
+    font-size: $fontSize-li;
+    margin-left: 1.5rem;
+    font-weight: 400;
+    @include breakup(large) {
+      font-size: 0.875rem;
+      margin-left: 3.4375rem;
+    }
+  }
+}

@@ -1,0 +1,83 @@
+//mobile-first-view
+.one {
+  max-height: 100vh;
+  background: #fff;
+  @include breakdown(medium) {
+    display: block;
+    .hero img.hero-img {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+  @include breakup(large) {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 3.875rem;
+  }
+  .hero {
+    padding: 0 2.3125rem;
+    margin: 4.8125rem auto;
+    margin-bottom: 3rem;
+    @include breakup(large) {
+      margin-top: 0;
+    }
+    .hero-img {
+      max-height: 15.25rem;
+      width: auto;
+      object-fit: cover;
+      padding: 0 auto;
+      @include breakup(large) {
+        min-height: 28.07rem;
+        width: auto;
+      }
+    }
+    &-description {
+      text-align: center;
+      @include breakup(large) {
+        text-align: left;
+        width: 50%;
+        padding-bottom: 6.6875rem;
+        h1.hero-header {
+          font-size: 1.9375rem;
+          padding: 0;
+        }
+        p.hero-paragraph {
+          font-size: 0.9375rem;
+          margin-right: 3rem;
+          margin-left: 0;
+          padding-left: 0;
+        }
+        input#email {
+          margin-top: 1.75rem;
+          width: 50%;
+        }
+        button[type="submit"].submit {
+          display: inline;
+          margin: 0;
+          padding: 0.9375rem 3.625rem;
+          cursor: pointer;
+          font-weight: 700;
+        }
+      }
+      @include breakdown(medium) {
+        p.hero-paragraph {
+          padding: 0 2.5rem;
+        }
+      }
+      h1 {
+        font-size: 1.5rem;
+        color: $fontColor;
+        padding: 0 1.9375rem 0 1.875rem;
+      }
+      p {
+        font-size: $fontSize-li;
+        padding: 0 3.125rem 0 2.625rem;
+        width: 75%;
+        margin: 0 auto;
+        margin-top: 2.25rem;
+      }
+    }
+  }
+}

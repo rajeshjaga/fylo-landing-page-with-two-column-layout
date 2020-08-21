@@ -1,0 +1,50 @@
+footer {
+  padding: 6.375rem 4.75rem;
+  background-color: $footerColor;
+  color: $lightGrayishBlue;
+  flex-wrap: wrap;
+  .phone,
+  .mail {
+    margin-top: 1rem;
+  }
+
+  li {
+    width: fit-content;
+    white-space: nowrap;
+    margin: 2rem 0;
+  }
+  .about {
+    width: 30%;
+    flex-wrap: wrap;
+  }
+  .social-links {
+    height: 100%;
+    svg {
+      &.fa-facebook-f,
+      &.fa-instagram,
+      &.fa-twitter {
+        display: inline-block;
+        height: 40px;
+        width: 40px;
+        color: $lightGrayishBlue;
+        border: 1px solid $lightGrayishBlue;
+        padding: 0.5em;
+        cursor: pointer;
+        border-radius: 50px;
+        margin: 0 1em;
+        transition: all 0.3s ease-in-out;
+        &:hover {
+          color: $footerColor;
+          background-color: $lightGrayishBlue;
+        }
+      }
+    }
+  }
+  @include breakdown(medium) {
+    padding: 4.125rem 2.4375rem;
+    flex-direction: column;
+    > li {
+      margin-left: 0;
+    }
+  }
+}
