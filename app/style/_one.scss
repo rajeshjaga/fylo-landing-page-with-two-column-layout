@@ -1,14 +1,6 @@
 //mobile-first-view
 .one {
   max-height: 100vh;
-  background: #fff;
-  @include breakdown(medium) {
-    display: block;
-    .hero img.hero-img {
-      display: block;
-      margin: 0 auto;
-    }
-  }
   @include breakup(large) {
     display: flex;
     flex-direction: row-reverse;

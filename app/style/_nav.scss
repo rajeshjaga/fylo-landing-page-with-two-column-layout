@@ -2,9 +2,7 @@ nav {
   background: #fff;
   padding: 1.5625rem 1.5rem;
   @include breakup(large) {
-    padding: 0 3.875rem;
-    padding-top: 3.8125rem;
-    padding-bottom: 3.8125rem;
+    padding: 3.8125rem 3.875rem;
   }
   img.logo-img {
     width: 5.125rem;
@@ -12,7 +10,6 @@ nav {
     @include breakup(large) {
       height: 3.0625rem;
       width: 10.375rem;
-      object-fit: cover;
     }
   }
   li {

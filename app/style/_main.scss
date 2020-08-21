@@ -13,13 +13,12 @@ main {
   }
   section {
     .hero {
-      // padding: 0 2.3125rem;
-      margin: 4.8125rem auto;
+      margin: 0 auto;
+      margin-top: 4.8125rem;
       margin-bottom: 3rem;
       .hero-img {
         max-height: 15.25rem;
         width: auto;
-        object-fit: cover;
         padding: 0 auto;
         @include breakup(large) {
           min-height: 28.07rem;
@@ -38,11 +37,9 @@ main {
   }
   .get-started {
     width: 100%;
-    padding-top: 6.625rem;
-    padding-bottom: 6.625rem;
     background-color: $getColor;
     &__container {
-      padding: 0 3.875rem;
+      padding: 6.625rem 3.875rem;
       color: $lightGrayishBlue;
       flex-wrap: wrap;
       > div {

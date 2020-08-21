@@ -1,8 +1,8 @@
 .card {
-  margin-top: 10vh;
-  margin-bottom: 82px;
   min-height: 20vh;
   width: 100%;
+  margin-top: 10vh;
+  margin-bottom: 5.125rem;
   @include breakup(large) {
     width: 67%;
   }
